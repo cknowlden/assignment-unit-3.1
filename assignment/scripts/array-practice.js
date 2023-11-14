@@ -7,10 +7,13 @@ console.log('--- 1. Practice creating arrays ---');
 let animalArray = ['fish', 'cat', 'bird', 'dog'];
 console.log('Animals are: ', animalArray);
 
+//let testArray = ['foot, elbow, knee, shoulder']; -- just wanted to see effect of commas in the array.
+//console.log('Body part are: ', testArray);
+
 // 1. TODO: Make an array `favoriteFoods` with some favorite foods.
 //    Be sure to console.log your array of foods to the console with
 //    a message, similar to the example above.
-const favoriteFoods = ['pasta', 'dip', 'potatoes', 'avocado'];
+const favoriteFoods = ['pasta', 'dip', 'potatoes', 'avocado', 'pizza', 'steak'];
 console.log('Favorite foods are: ', favoriteFoods);
 
 // Array.length: A property that tells you how many items are in a given array.
@@ -24,14 +27,14 @@ console.log('Number of animals:', numberOfAnimals);
 //    to assign it the number value of how many items are inside `favoriteFoods`.
 //    Don't forget to console.log `numberOfFoods` to make sure your code worked!
 let numberOfFoods = favoriteFoods.length;
-console.log('Numer of foods: ', numberOfFoods);
+console.log('Number of foods: ', numberOfFoods);
 
 // Accessing array items
 console.log('--- 3. Accessing items in an array ---');
 
 // Example: Log the first animal from the array using its array index
 let firstAnimal = animalArray[0];
-console.log('First animal is', firstAnimal);
+console.log('First animal is:', firstAnimal);
 
 // 3.a. TODO: Create a variable `secondAnimal` and assign it the value
 //      of the second item from the `animalArray`.
@@ -45,12 +48,14 @@ console.log('Second animal is:', secondAnimal);
 //      You'll need to console.log `animalArray` and `lastAnimal` to make
 //      sure that your code does what you want. (Never trust your code until
 //      you have proof that it works!)
-let lastAnimal = animalArray[animalArray.length - 1];
+let lastAnimal = animalArray[3];
 console.log('Animals are:', animalArray);
 console.log('The last animal is:', lastAnimal);
 // 3.c. (STRETCH) TODO: Refactor 3.b to use the `animalArray` variable's .length 
 //       property, rather than the exact (hardcoded) index number of the last item.
-
+lastAnimal = animalArray[animalArray.length - 1];
+console.log('Animals are:', animalArray);
+console.log('The last animal is:', lastAnimal);
 
 
 // Adding & Removing Array Items
@@ -65,6 +70,11 @@ console.log('Added an animal to end,', animalArray);
 //      a dessert that you love.
 //      Similar to above, add the `dessert` to the end of your `favoriteFoods`
 //      array. (How can you be 100% certain this worked? 🤔)
+console.log('My favorite foods are:', favoriteFoods);
+let dessert = 'key lime pie';
+favoriteFoods.push(dessert);
+console.log('My favorite dessert is', dessert,'!')
+console.log('My favorite foods and my favorite dessert are:', favoriteFoods);
 
 
 // Example: Add to the beginning of an array using the Array.unshift method.
@@ -75,7 +85,9 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 // 4.b. TODO: Create a variable `entree` and assign it a string value of
 //      an entree that you enjoy.
 //      Add the `entree` to the beginning of your `favoriteFoods` array.
-
+let entree = 'lasagna';
+favoriteFoods.unshift(entree);
+console.log(`I am a little piggy so I wanted to add another entree to my favorite foods list: ${favoriteFoods}`);
 
 // Example: Remove the last animal by using the Array.pop method.
 let removedAnimal = animalArray.pop();
@@ -91,7 +103,9 @@ let colors = ['orange', 'yellow', 'green', 'teal'];
 //      Don't forget! Use console.log to verify that the `colors`
 //      array only contains three items now, AND to verify that `lastColor`
 //      contains the value "teal".)
-
+console.log('The perfect colors are:', colors);
+let lastColor = colors.pop();
+console.log('I decided to remove', lastColor, 'because it is ugly');
 
 // Example: Remove the first animal using the Array.shift method.
 removedAnimal = animalArray.shift();
@@ -101,6 +115,9 @@ console.log('The animals are now', animalArray);
 // 4.d. TODO: Remove the first value from the `colors` array and store it
 //      inside a new variable called `firstColor`.
 //      To verify that your code worked, console.log `firstColor`!  
+console.log('MY favorite colors are', colors);
+let firstColor = colors.shift();
+console.log('I changed my mind,', firstColor, 'is ugly so I removed it');
 
 
 
@@ -111,11 +128,19 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 
 // 5.a (STRETCH) TODO: Replace the second gem with 'Tourmaline'.
 //      Remember to console.log the updated array.
-
+console.log('The list of gems is:', gems);
+var index = gems.indexOf[1];
+if (~index) {
+  gems[1] = 'Tourmaline';
+}
+console.log('The new list of gems is:', gems);
 
 // 5.b (STRETCH) TODO: Sort your gems array in reverse alphabetical order.
 //     Please console.log the sorted array.
-
+gems.sort();
+console.log(`Sorted gems list is: ${gems}`);
+gems.reverse();
+console.log(`Gems sorted backwards is: ${gems}`);
 
 // 5.c (STRETCH) TODO: Create a variable `gemString` and assign it a string value
 //     that's made up of each value from the `gems` array, but separated by the
