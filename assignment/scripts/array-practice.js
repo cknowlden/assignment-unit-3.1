@@ -128,12 +128,13 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 
 // 5.a (STRETCH) TODO: Replace the second gem with 'Tourmaline'.
 //      Remember to console.log the updated array.
-console.log('The list of gems is:', gems);
+console.log(`The list of gems is: ${gems}`);
 var index = gems.indexOf[1];
 if (~index) {
   gems[1] = 'Tourmaline';
 }
-console.log('The new list of gems is:', gems);
+gemsList = gems.join(', ');
+console.log('The new list of gems is:', gemsList);
 
 // 5.b (STRETCH) TODO: Sort your gems array in reverse alphabetical order.
 //     Please console.log the sorted array.
@@ -149,14 +150,16 @@ console.log(`Gems sorted backwards is: ${gems}`);
 //       "Emerald and Diamond and Tourmaline and Topaz"
 //     🔥 You'll need to research the .join Array method. 🔥
 //     Don't forget to console.log `gemString`...
-
+let gemString = gems.join(' and ');
+console.log(`The gem string is ${gemString}`);
 
 // 5.d (STRETCH) TODO: Make a new array `colorfulGems` that combines 
 //     the gems array with the colors array.
 //     It should look something like:
 //       ['Tourmaline', 'Topaz', 'Tanzanite', 'Iolite', 'Emerald', 'Diamond', 'yellow', 'green']
 //     Now, console.log the new array.
-
+let colorfulGems = gems.concat(colors);
+console.log('Colorful gems are:', colorfulGems);
 
 
 
